@@ -1,0 +1,731 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+
+   
+  .header {
+    background-color: #5b5656; /* Dark background for a sleek, professional look */
+    color: white;
+    padding: 20px 0;
+    position: sticky; /* Keeps the header at the top while scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+  }
+  /* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  transition: 0.3s;
+}
+/* Global Styles (unchanged from the previous version) */
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;  /* Initially hidden off-screen */
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 9999;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.sidebar-links a:hover {
+  background-color: #444;
+}
+
+/* Show the sidebar when active */
+.sidebar.active {
+  left: 0; /* Slide the sidebar in */
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:rgb(94, 129, 129); /* Accent color for logo */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .logo img {
+    width: 100px; /* Adjust the size of the logo */
+    height: 70px;
+    display: block;
+    margin-left: 1px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    display: block;
+    border-radius: 30px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effects for nav links */
+  .nav-links a:hover {
+    background-color: #434647; /* Darker shade on hover */
+    color: #fff;
+  }
+  /* Hero Section Styling */
+.hero {
+  background-image: url('./background.avif'); /* Use a suitable image or color */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero button {
+  background-color: #51785b; /*  color for the button */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #2e4b32; /* Darker shade*/
+}
+
+
+
+  
+  
+    
+ /* Menu Section Styling */
+ /* Menu Section Styling */
+.menu {
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color:green; /* Accent color similar to button */
+}
+
+/* Menu Grid Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.menu-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #ff5722;
+}
+
+.menu-item h3 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.menu-item p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.menu-item button {
+  background-color:rgb(53, 125, 53);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.menu-item button:hover {
+  background-color:rgb(23, 84, 23);
+}
+
+.menu-item button + button {
+  background-color:goldenrod; /* color for ratings */
+}
+
+.menu-item button + button:hover {
+  background-color: rgb(114, 157, 48);
+}
+
+
+
+ /* Cart Section Styling */
+  .cart {
+    background-color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .cart h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  #cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .cart-item-info {
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+  
+  .cart-item-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .cart-item-info p {
+    color: #777;
+    font-size: 1rem;
+  }
+  
+  .cart-item button {
+    background-color: #e15c4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cart-item button:hover {
+    background-color: #e15c4d;
+    transform: scale(1.05);
+  }
+  
+  /* Cart Total Section */
+  #cart-total {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  #cart-total span {
+    font-weight: bold;
+  }
+  
+  
+  /* Style for the success message */
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+/* Style for disabled Add to Cart buttons */
+button[disabled] {
+  background-color: #888; /* Gray color */
+  cursor: not-allowed;
+}
+
+
+/* Style for Remove button */
+.remove-button {
+  background-color: #f44336; /* Red color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+.order-placed-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+}
+/* Styling the Place Order button */
+#place-order-btn {
+  background-color: #4CAF50; 
+  color: white; 
+  font-size: 18px; /* Larger text */
+  padding: 15px 30px; /* Add padding for better button size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 10 rem; 
+  margin-top: 20px; /* Add space above the button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+  text-align: center; /* Center the text */
+}
+
+/* Hover effect */
+#place-order-btn:hover {
+  background-color: #45a049; /* Darker green when hovering */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Focus effect (for accessibility) */
+#place-order-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px rgba(72, 245, 91, 0.6); /* Green glow effect */
+}
+
+/* Disabled button state (if needed) */
+#place-order-btn:disabled {
+  background-color: #cccccc; /* Gray color for disabled button */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+
+   /*feature section  */
+.features {
+    background-image: url('./background-image-features.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better readability */
+    z-index: 1;
+  }
+  
+  .features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .features li {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #6c63ff;
+    font-size: 1.6rem;
+    top: 0;
+  }
+  
+  .features li span {
+    color: #f1f1f1;
+  }
+  
+  .features li:hover {
+    color: #6c63ff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Review Section Styling */
+.reviews {
+    background-image: url('./background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .reviews .review {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .reviews .review:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .reviews .review p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .reviews .review p:last-child {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  /* Contact Section Styling */
+.contact {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .contact form input[type="text"],
+  .contact form input[type="email"] {
+    max-width: 100%;
+  }
+  
+  .contact form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .contact form button {
+    padding: 12px 30px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact form button:hover {
+    background-color: #574bfc;
+  }
+  
+  .contact form input:focus,
+  .contact form textarea:focus {
+    border-color: #6c63ff;
+    outline: none;
+  }
+  
+  .contact form input::placeholder,
+  .contact form textarea::placeholder {
+    font-style: italic;
+    color: #999;
+  }
+  
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+  }
+  @media (max-width: 1200px) {
+    .menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .nav-links {
+      gap: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-grid {
+      /* grid-template-columns: 1fr; */
+      grid-template-columns: repeat(2, 1fr);  /* Two items per row for tablets */
+      gap: 15px;
+    }
+    .menu-item img {
+      height: 200px; /* Set a fixed height for images */
+      object-fit: cover; /* Ensures images are cropped appropriately */
+    }
+    .menu-item {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+    .menu-item button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    .features h2 {
+      font-size: 2rem;
+    }
+  
+    .reviews h2 {
+      font-size: 2rem;
+    }
+  
+    .contact form input,
+    .contact form textarea {
+      width: 90%;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column; /* Stack vertically */
+      gap: 10px;
+      padding: 0;
+    }
+  
+    .nav-links li {
+      font-size: 1.2rem;
+    }
+  
+    .nav-links a {
+      display: block; /* Ensures the links span the full width when stacked */
+      padding: 10px 0;
+      text-align: center;
+    }
+   
+  }
+@media (max-width: 480px) {
+    .header .logo {
+      font-size: 1.5rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+    .menu-grid {
+       grid-template-columns: 1fr; 
+    }
+    .menu-item h3 {
+      font-size: 1.1rem;
+    }
+  
+    .menu-item p {
+      font-size: 0.9rem;
+    }
+    .menu-item button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    .cart h2 {
+      font-size: 2rem;
+    }
+  
+    .cart-total {
+      font-size: 1.2rem;
+    }
+  
+    .footer p {
+      font-size: 0.8rem;
+    }
+    /* Show hamburger menu on smaller screens */
+    .hamburger {
+      display: block; /* Show the hamburger icon */
+    }
+    
+  }  
