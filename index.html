@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiffin Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./logo1.png" alt="Tiffin Service Logo">
+      </a>
+      <h1 class="logo">Tasty Tiffins</h1>
+      <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Sidebar for mobile -->
+<div id="sidebar" class="sidebar">
+  <ul class="sidebar-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+  
+<!-- hero section -->
+  <section class="hero">
+    <h2>Home-Cooked Meals Delivered To You</h2>
+    <p>Delicious and affordable meals made with love!</p>
+    <button onclick="scrollToMenu()">Order Now</button>
+  </section>
+
+  <!-- Add a search bar to the menu -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="./meal1.jpg" alt="Meal 1">
+        <h3>Paneer Curry</h3>
+        <p>Price: ₹150</p>
+        <div>
+        <button onclick="addToCart('Paneer Curry', 150)">Add to Cart</button>
+        <button onclick="rateDish('Paneer Curry', 5)">⭐ Rate</button>
+    </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal2.png" alt="Meal 2">
+        <h3>Veg Thali</h3>
+        <p>Price: ₹200</p>
+        <div>
+        <button onclick="addToCart('Veg Thali', 200)">Add to Cart</button>
+        <button onclick="rateDish('Veg Thali', 5)">⭐ Rate</button>
+    </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal3.jpg" alt="Meal 2">
+        <h3>Chole Bhature</h3>
+        <p>Price: ₹100</p>
+        <div>
+        <button onclick="addToCart('Chole Bhature', 100)">Add to Cart</button>
+        <button onclick="rateDish('Chole Bhature', 5)">⭐ Rate</button>
+    </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal4.avif" alt="Meal 2">
+        <h3> Madrasi Dosa</h3>
+        <p>Price: ₹150</p>
+        <div>
+        <button onclick="addToCart('Madrasi Dosa', 150)">Add to Cart</button>
+        <button onclick="rateDish('Madrasi Dosa', 5)">⭐ Rate</button>
+    </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal5.jpg" alt="Meal 3">
+        <h3>Chicken Biryani</h3>
+        <p>Price: ₹150</p>
+        <div>
+        <button onclick="addToCart('Chicken Biryani', 150)">Add to Cart</button>
+        <button onclick="rateDish('Chicken Biryani', 5)">⭐ Rate</button>
+    </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal6.jpg" alt="Meal 1">
+        <h3>Paneer Naan</h3>
+        <p>Price: ₹150</p>
+        <div>
+          <button onclick="addToCart('Paneer Naan', 150)">Add to Cart</button>
+          <button onclick="rateDish('Paneer  Naan', 5)">⭐ Rate</button>
+        </div>
+        </div>
+        <div class="menu-item">
+            <img src="./meal7.jpg" alt="Meal 2">
+            <h3>Rajma Chawal</h3>
+            <p>Price: ₹80</p>
+            <div>
+              <button onclick="addToCart('Rajma Chawal', 80)">Add to Cart</button>
+              <button onclick="rateDish('Rajma Chawal', 4)">⭐ Rate</button>
+            </div>
+          </div>
+       <div class="menu-item">
+        <img src="./meal8.jpg" alt="Meal 2">
+        <h3>Sarso ka Saag</h3>
+        <p>Price: ₹60</p>
+        <div>
+          <button onclick="addToCart('Sarso ka Saag', 60)">Add to Cart</button>
+          <button onclick="rateDish('Sarso ka Saag', 4)">⭐ Rate</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal9.webp" alt="Meal 2">
+        <h3>Butter Roti</h3>
+        <p>Price: ₹10 each</p>
+        <div>
+          <button onclick="addToCart('Butter Roti', 10)">Add to Cart</button>
+          <button onclick="rateDish('Butter Roti', 4)">⭐ Rate</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="./meal 10.jpg" alt="Meal 2">
+        <h3>Aalo Paratha</h3>
+        <p>Price: ₹50</p>
+        <div>
+          <button onclick="addToCart('Aalo Paratha', 50)">Add to Cart</button>
+          <button onclick="rateDish('Aalo Paratha', 4)">⭐ Rate</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Add a cart section -->
+<section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-container"></div>
+    <p id="cart-total">Total: ₹0</p>
+    <button id="place-order-btn" onclick="placeOrder()">Place Order</button>
+  </section>
+  
+  
+  
+       
+  
+  <!-- Update form to use validation -->
+  
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Easy Order Customization</li>
+      <li>Food Varieties and Price Range</li>
+      <li>Local Delivery Providers</li>
+      <li>Ratings and Reviews</li>
+    </ul>
+  </section>
+<!-- review section -->
+  <section id="reviews" class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review">
+      <p>"The food is amazing and tastes just like home!"</p>
+      <p>- Anjali</p>
+    </div>
+    <div class="review">
+      <p>"Affordable prices and great delivery service."</p>
+      <p>- Rahul</p>
+    </div>
+  </section>
+<!-- contact section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!-- footer section -->
+
+  <footer>
+    <p>© 2025 Tiffin Service. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
